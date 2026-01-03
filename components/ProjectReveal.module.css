@@ -1,0 +1,133 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  padding: 48px;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+  animation: reveal 0.8s ease-out forwards;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 auto 32px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.meta {
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  margin-bottom: 16px;
+}
+
+.title {
+  color: #f0f0ff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0 0 24px;
+}
+
+.description {
+  color: #a0a0aa;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  margin: 0 0 24px;
+  font-style: italic;
+}
+
+.longDescription {
+  color: #707078;
+  font-size: 13px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.tag {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  padding: 6px 12px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.specs {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.spec {
+  color: #606070;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.specDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #404050;
+}
+
+.resetButton {
+  margin-top: 64px;
+  padding: 12px 32px;
+  background: transparent;
+  border: 1px solid rgba(100, 100, 120, 0.4);
+  color: #808090;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.resetButton:hover {
+  border-color: var(--hover-color);
+  color: #c0c0d0;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
