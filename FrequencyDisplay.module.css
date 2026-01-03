@@ -1,0 +1,21 @@
+.container {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  z-index: 10;
+  text-align: right;
+}
+
+.label {
+  color: #505060;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+.value {
+  color: #c0c0d0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
